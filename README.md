@@ -1,25 +1,19 @@
-# pet
+# pet 寵物網站
 
-## Project setup
-```
-npm install
-```
+## 簡介
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+此為基於菜鳥練習，使用 Vue cli，以自刻修改如下:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. blog and media 使用之 jQuery 廢棄
+2. js 優化
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 使用技術
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-"# pet" 
+- Vue Cli 4
+- Vuex
+- VueRouter
+- VueComponents
+- API
+- RWD
+- JavaScript(ES6、LocalStorage 等)
+- SCSS
