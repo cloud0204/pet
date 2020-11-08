@@ -52,7 +52,7 @@ export default {
   },
   beforeCreate() {
     axios
-      .get("/blog.json")
+      .get("./blog.json")
       .then((res) => {
         // console.log(res.data)
         this.blog = res.data.blog;

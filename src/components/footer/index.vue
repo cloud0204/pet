@@ -93,7 +93,7 @@ export default {
   },
   beforeCreate() {
     axios
-      .get("/blog.json")
+      .get("./blog.json")
       .then((res) => {
         this.blog = res.data.blog;
       })
