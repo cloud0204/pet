@@ -12,32 +12,37 @@
     </section>
     <pricecomponent v-if="state === 'buy'" />
     <div class="shoplist" v-else>
-      <ul>
-        <li>
-          <span>商品名</span>
-          <span>價格</span>
-          <span>數量</span>
-          <span>合計</span>
-        </li>
-        <li v-for="(item, index) in content" :key="item.name">
-          <span>
-            <div class="btn" @click="removeHandler(index)">刪除</div>
-            <img :src="require(`@/assets/jpg/${item.src}`)" />
-            <div class="text">
-              {{ item.name }}
-            </div>
-          </span>
-          <span>{{ item.price }}</span>
-          <span data-descr="點擊修改數量">
-            <inputcomponent :number="item.number" :index="index" />
-          </span>
-          <span>{{ item.price * item.number }}</span>
-        </li>
-      </ul>
-      <div class="check">
-        <h3>總價:{{ totalprice }}</h3>
-        <span class="btn" @click="submitHandler()">確認購買</span>
-      </div>
+      <section v-if="content.length == 0">
+        <h2>購物車沒有東西</h2>
+      </section>
+      <section v-else>
+        <ul>
+          <li>
+            <span>商品名</span>
+            <span>價格</span>
+            <span>數量</span>
+            <span>合計</span>
+          </li>
+          <li v-for="(item, index) in content" :key="item.name">
+            <span>
+              <div class="btn" @click="removeHandler(index)">刪除</div>
+              <img :src="require(`@/assets/jpg/${item.src}`)" />
+              <div class="text">
+                {{ item.name }}
+              </div>
+            </span>
+            <span>{{ item.price }}</span>
+            <span data-descr="點擊修改數量">
+              <inputcomponent :number="item.number" :index="index" />
+            </span>
+            <span>{{ item.price * item.number }}</span>
+          </li>
+        </ul>
+        <div class="check">
+          <h3>總價:{{ totalprice }}</h3>
+          <span class="btn" @click="submitHandler()">確認購買</span>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -76,6 +81,12 @@ section {
   background-color: $color1;
   color: $color2;
   // overflow-y: scroll;
+  section {
+    display: block;
+    h2{
+      text-align: center;
+    }
+  }
   li {
     width: 100%;
     display: table;
@@ -199,8 +210,8 @@ export default {
         this.$store.commit("remove_shop", index);
     },
     submitHandler() {
-      let data=JSON.stringify({content:this.$store.state.content});
-      console.log(`購買資料:${data}`)
+      let data = JSON.stringify({ content: this.$store.state.content });
+      console.log(`購買資料:${data}`);
       // axios
       //   .post(
       //     "http://localhost:3000/posts",
