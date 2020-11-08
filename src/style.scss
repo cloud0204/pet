@@ -1,0 +1,63 @@
+$color1: rgb(19, 8, 5);
+$color2: rgb(255, 255, 255);
+$color3: rgb(0, 189, 86);
+$color4: rgb(190, 190, 190);
+$color5: grey;
+
+$jpg1: assets/jpg/banner;
+$jpg2: assets/jpg/care;
+$jpg3: assets/jpg/happy;
+$jpg4: assets/jpg/relax;
+$jpg5: assets/jpg/see;
+$jpg6: assets/jpg/about;
+
+%flex-row {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+%flex-colume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+%btn {
+  background-color: $color3;
+  border-color: $color1;
+  padding: 10px;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Noto+Sans+TC&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+#app {
+  font-family: "Noto Sans TC", sans-serif;
+  color: $color2;
+  background-color: $color1;
+  // background-color: red;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Merriweather", serif;
+}
+a {
+  color: $color2;
+}
+a:hover {
+  transition: color 0.5s;
+  color: $color3;
+}
+

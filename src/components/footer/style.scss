@@ -1,0 +1,118 @@
+@import '@/style.scss';
+.footer {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    .box {
+      width: 20%;
+      margin: 20px;
+      color: $color4;
+      h4 {
+        color: $color2;
+      }
+      h4:after {
+        display: block;
+        content: "";
+        width: 50px;
+        height: 5px;
+        background-color: $color3;
+      }
+      .news {
+        width: 100%;
+        // margin: 10px;
+        section {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-content: center;
+          .jpg {
+            width: 20%;
+            margin-top: 5px;
+            margin-right: 5px;
+            // border: 2px solid red;
+            img {
+              width: 40px;
+              height: 40px;
+              overflow: hidden;
+              object-fit: cover;
+              border-radius: 5px;
+              // display: block;
+              // margin: auto;
+            }
+          }
+          .text {
+            width: 70%;
+            height: auto;
+            margin: 0 10px 10px 10px;
+            // overflow: hidden;
+            // border: 2px solid red;
+            span {
+              color: $color4;
+            }
+            p {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      ul > li {
+        display: table;
+        span {
+          display: table-cell;
+        }
+        .iconR {
+          width: 30px;
+        }
+      }
+      .iconL {
+        font-size: 30px;
+        width: 40px;
+        text-align: center;
+        top: 80px;
+        opacity: 1;
+      }
+    }
+  }
+  .copyright {
+    p {
+      text-align: center;
+    }
+  }
+  .footer.show {
+    .box {
+      .iconL {
+        position: relative;
+        top: 0;
+        opacity: 1;
+        transition: all 2s;
+      }
+    }
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-wrap: wrap;
+      .box {
+        width: 100%;
+        .news {
+          width: 100%;
+          section {
+            width: 100%;
+            justify-content: center;
+  
+            .jpg {
+              width: 30%;
+              // border: 2px solid red;
+              img {
+                width: 80px;
+                height: 80px;
+                margin: auto;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

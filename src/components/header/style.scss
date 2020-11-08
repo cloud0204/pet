@@ -1,0 +1,89 @@
+@import "@/style.scss";
+.header {
+  width: 100%;
+  margin-bottom: 60px;
+  .navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-sizing: content-box;
+    .bars,
+    .shop {
+      margin: 15px;
+      padding: 10px;
+      position: relative;
+      .itemofshop {
+        font-size: 16px;
+        position: absolute;
+        background-color: red;
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        top: -1px;
+        right: 10px;
+        // margin-top: -10px;
+        // margin-right: -10px;
+      }
+    }
+  }
+
+  #check {
+    position: fixed;
+    z-index: -1;
+    visibility: hidden;
+  }
+  .menu {
+    width: 20%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: -30%;
+    transition: left 0.2s;
+    z-index: 11;
+    background-color: $color1;
+    color: $color2;
+    li {
+      margin: 10px 20px 10px;
+    }
+    .router-link-exact-active {
+      color: $color3;
+    }
+  }
+  .menu-bg {
+    display: none;
+    position: fixed;
+    top: 50px;
+    z-index: 10;
+  }
+  #check:checked ~ {
+    .menu {
+      left: 0%;
+      transition: left 0.2s;
+    }
+    .menu-bg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .menu {
+      width: 40%;
+      left: -40%;
+    }
+  }
+}
