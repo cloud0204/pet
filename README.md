@@ -6,6 +6,8 @@
 
 1. blog and media 使用之 jQuery 廢棄
 2. js 優化
+3. 購物車使用 Vuex 修改
+4. VueRouter 與 VueComponents 使用
 
 ## 使用技術
 
