@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["veterinarian"],{"840b":function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},a=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",{attrs:{id:"veterinarian"}},[t("h2",[e._v("修改中")])])}],i={name:"veterinarian"},c=i,l=t("2877"),s=Object(l["a"])(c,r,a,!1,null,null,null);n["default"]=s.exports}}]);
+//# sourceMappingURL=veterinarian.44251c34.js.map
